@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/x-icon" href="./assets/images/logo.png">
+		<link rel="stylesheet" href="style.css">
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
+		<script type="text/javascript" src="./data.js"></script>
+		<script src="./app.js" defer></script>
+		<title>CommeAndPlay</title>
+	</head>
+
+	<body>
+
+		<header>
+			<a href="#" style="color: inherit;"><div class="logo"><img src="./assets/images/logo1.png" alt=""><span>AI Music Play</span></div></a>
+
+			<div class="menuSm"></div>
+
+			<section class="menu">
+				<ul class="menu-items">
+					<li>
+						<a href="#" style="--i:1">Home</a>
+					</li>
+					<li>
+						<a href="#" style="--i:2">My Music</a>
+					</li>
+					<li>
+						<a href="#" style="--i:3">Pricing</a>
+					</li>
+					<li>
+						<a href="#" style="--i:4">Contact</a>
+					</li>
+				</ul>
+			</section>
+
+			<section class="search" style="--i:5">
+				<input type="search">
+				<ion-icon name="search-outline"></ion-icon>
+			</section>
+
+			<section class="log">
+				<button style="--color:#f14141; --i:6">Log In</button>
+				<button style="--color:#00d0ff; --i:7">Sing Up</button>
+			</section>
+
+		</header>
+
+		<main>
+
+			<section class="right-container">
+				<div class="music-card">
+					<div class="music-show">
+						<img id="vinetteImg" src="./assets/images/preview.jpg" alt="image vinette music">
+						<div class="titleSoung">
+							<ion-icon name="musical-notes-outline"></ion-icon>
+							<p>
+								<k id="musicTitle">Music Title</k> <br><span id="musicArtist">Johnny Orilando, Macknzie Ziegier</span>
+							</p>
+							<img src="./assets/images/Sound-Wave.png" alt="sond wave image" class="" id="wavePlay">
+						</div>
+						<div class="icon" style="--color:#00d0ff;">
+							<ion-icon id="refresh" class="bg-round" name="refresh-circle-outline"></ion-icon>
+							<ion-icon id="repeat" class="bg-round" name="shuffle-outline"></ion-icon>
+							<ion-icon class="bg-round" name="settings-outline"></ion-icon>
+							<ion-icon id="volume" class="bg-round" name="volume-high-outline"></ion-icon>
+							<ion-icon class="bg-round" name="list-outline"></ion-icon>
+						</div>
+					</div>
+					<div class="progress-area">
+						<input type="range" class="progress-bar" value="100">
+						<!-- <div class="progress-bar"></div> -->
+					</div>
+					<div class="music-control">
+						<audio id="audio" src="./assets/media/music2.mp3"></audio>
+						<span class="muniteri"><k id="curentTime">00:00</k>  | <k id="totalTime">00:00</k></span>
+						<div class="volume">
+							<ion-icon name="volume-high-outline" id='volumeIcon'></ion-icon>
+							<input type="range" value="40" id="volumeSong" min="0" max="100" onchange="volumeMusic()">
+						</div>
+						<ion-icon name="play-back-outline" id="prev">Prev</ion-icon>
+						<ion-icon name="play-outline" id="pauseplay">Play</ion-icon>
+						<ion-icon name="play-forward-outline" id='next'>Next</ion-icon>
+						<ion-icon name="heart-outline"></ion-icon>
+					</div>
+					<div class="music-icone">
+						<ion-icon class="bg-blur" name="logo-facebook"></ion-icon>
+						<ion-icon class="bg-blur" name="logo-twitter"></ion-icon>
+						<ion-icon class="bg-blur" name="logo-instagram"></ion-icon>
+						<ion-icon class="bg-blur" name="share-social-outline"></ion-icon>
+						<ion-icon class="bg-blur" name="cloud-download-outline"></ion-icon>
+					</div>
+			</section>
+
+			<section class="left-container">
+				<div class="widgets">
+					<div class="bg-transparent">
+						<ion-icon name="folder-open"></ion-icon>
+						<span>My Music</span>
+					</div>
+					<div class="bg-transparent">
+						<ion-icon name="heart"></ion-icon>
+						<span>Favourites</span>
+					</div>
+					<div class="bg-transparent">
+						<ion-icon name="albums"></ion-icon>
+						<span>Album</span>
+					</div>
+					<div class="bg-transparent">
+						<ion-icon name="timer"></ion-icon>
+						<span>Recent List</span>
+					</div>
+				</div>
+				<div class="playlist">
+					<div class="cardPlayList">
+						<div class="card-content">
+							<div class="headTitle">
+								<h2>
+									<ion-icon name="disc-outline"></ion-icon> Play list music
+								</h2>
+							</div>
+							<div id="playList">
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<footer>
+			<div class="album">
+				<div class="cardAlbum">
+					<ion-icon name="radio-outline"></ion-icon>
+					<a href="https://mubert.com/render"><h2>Mubert<br><span>Generate a track</span></h2></a>
+				</div>
+				<div class="cardAlbum">
+					<ion-icon name="radio-outline"></ion-icon>
+					<a href="https://beta.mubert.com/"><h2>Mubert<br><span>Mubert Studio</span></h2></a>
+				</div>
+				<div class="cardAlbum">
+					<ion-icon name="radio-outline"></ion-icon>
+					<a href="https://pitch.com/public/fd02c60f-00a4-4a74-8772-423d4a607b94"><h2>Mubert<br><span>Mubert API</span></h2></a>
+				</div>
+				<div class="cardAlbum">
+					<ion-icon name="radio-outline"></ion-icon>
+					<a href="https://streamers.mubert.com/"><h2>Mubert<br><span>Mubert for streamers</span></h2></a>
+				</div>
+			</div>
+		</footer>
+
+	</body>
+
+</html>
