@@ -48,18 +48,4 @@ const MusicList = [
         artist : 'Mubert Music',
         music : './assets/media/music7.mp3'
     },
-    // {
-    //     id : 7,
-    //     img : 'images/stay.png',
-    //     name : 'Study Beats',
-    //     artist : 'Mubert Music',
-    //     music : './assets/media/music8.mp3'
-    // },
-    // {
-    //     id : 8,
-    //     img : 'images/stay.png',
-    //     name : 'Minimal House Beats',
-    //     artist : 'Mubert Music',
-    //     music : './assets/media/music9.mp3'
-    // },
 ];
