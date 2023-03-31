@@ -92,6 +92,35 @@ header {
 	height: 10%;
 }
 
+header .menuSm{
+	position: relative;
+	width: 35px;
+	height: 3px;
+	background: #f2f2f2;
+	display: none;
+	cursor: pointer;
+}
+header .menuSm:before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 25px;
+	height: 3px;
+	background: #f2f2f2;
+	cursor: pointer;
+}
+header .menuSm:after {
+	content: '';
+	position: absolute;
+	top: 20px;
+	left: 0;
+	width: 35px;
+	height: 3px;
+	background: #f2f2f2;
+	cursor: pointer;
+}
+
 header .logo {
 	display: flex;
 	flex-direction: column;
@@ -107,6 +136,58 @@ header .logo img {
 header .logo span {
 	font-family: menuetto, sans-serif;
 	font-size: 1.2vw;
+}
+
+header .smMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 45%;
+	background: #02020230;
+	backdrop-filter: blur(5px);
+	transform: translateX(-100%);
+	z-index: 10;
+}
+header .smMenu .close {
+	position: absolute;
+	top: 25px;
+	right: 30px;
+	width: 30px;
+	height: 3px;
+	background: #fff;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+header .smMenu .close:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 30px;
+	height: 3px;
+	background: #fff;
+	transform: rotate(-90deg);
+}
+header .smMenu.show {
+	transform: translateX(0);
+}
+
+header .smMenu .menu-items {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	margin: 100px 0 0 20px;
+	font-size: 3.4vh;
+}
+
+header .smMenu .menu-items a {
+	color: #FFF;
+}
+header .smMenu .menu-items a:hover {
+	color: #f14141;
+	letter-spacing: .3vw;
+	font-weight: 900;
 }
 
 header .menu .menu-items {
@@ -619,6 +700,9 @@ footer .album .cardAlbum span {
 @media (width <= 800px){
 	header .menu, header .search, main .left-container .widgets {
 		display: none;
+	}
+	header .menuSm{
+		display: block;
 	}
 	header .log button {
 		font-size: 1vw;

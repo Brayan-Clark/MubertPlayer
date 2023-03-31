@@ -75,7 +75,18 @@ let volume = document.getElementById('volume')
 let volumeSong = document.getElementById('volumeSong')
 let volumeIcon = document.querySelector('#volumeIcon')
 
-
+// let menuSm = document.querySelector('.menuSm')
+let smMenu = document.querySelector('.smMenu')
+let i = 1
+function showSmMenu(){
+  if(i==1){
+    smMenu.classList.add('show')
+    i=0 
+  }else{
+    smMenu.classList.remove('show')
+    i=1
+  }
+}
 
 MusicList.forEach(music => {
 
